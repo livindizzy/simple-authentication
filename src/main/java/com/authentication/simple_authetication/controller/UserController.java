@@ -27,7 +27,7 @@ public class UserController {
     @Operation(summary = "Sign-In User API", description = "API to authenticate user login and get JWT for authorization.")
     @ApiResponses(value = { @ApiResponse(responseCode = "200", description = "Welcome to system message"),
             @ApiResponse(responseCode = "401", description = "Unauthorized access"),
-            @ApiResponse(responseCode = "403", description = "Unauthorized access"),
+            @ApiResponse(responseCode = "403", description = "Forbidden access"),
             @ApiResponse(responseCode = "500", description = "Something went wrong") })
     @PostMapping("/v1/sign-in")
     public Response<UserLoginResponse> signIn(@RequestBody UserLoginRequest request) {
